@@ -1,92 +1,48 @@
-### Problem 
+# Graph Problems
 
-Once upon a time, in a kingdom far, far away, there lived a King Byteasar I. As a kind and wise ruler, he did everything 
-in his (unlimited) power to make life for his subjects comfortable and pleasant. One cold evening a messenger arrived at 
-the king's castle with the latest news: all kings in the Kingdoms Union had started enforcing traffic laws! In order to 
-not lose his membership in the Union, King Byteasar decided he must do the same within his kingdom. But what would the 
-citizens think of it?
+This repository contains solutions to various graph-related problems implemented in different programming languages.
 
-The king decided to start introducing the changes with something more or less simple: change all the roads in the kingdom 
-from two-directional to one-directional (one-way). He personally prepared the roadRegister of the new roads, and now he 
-needs to make sure that the road system is convenient and there will be no traffic jams, i.e. each city has the same 
-number of incoming and outgoing roads. As the Hand of the King, you're the one who he has decreed must check his calculations.
+## Table of Contents
 
-### Example
+- [Introduction](#introduction)
+- [Folder Structure](#folder-structure)
+- [List of Problems](#list-of-problems)
+- [Contributing](#contributing)
+- [License](#license)
 
-```
-    For
+## Introduction
 
-    roadRegister = [[false, true,  false, false],
-                    [false, false, true,  false],
-                    [true,  false, false, true ],
-                    [false, false, true,  false]]
+Graph problems are fundamental in computer science and have wide applications in various domains. This repository serves as a collection of solutions to graph problems, providing implementations in different programming languages.
 
-    the output should be
-    solution(roadRegister) = true.
+Feel free to explore the solutions, learn from them, and contribute your own solutions.
 
-    The cities will be connected as follows:
+## Folder Structure
 
-    Cities 0, 1 and 3 (0-based) have one incoming and one outgoing road, and city 2 has two incoming and two outgoing roads. Thus, the output should be true.
+The repository is organized into folders based on the problem being solved. Each language folder contains solutions to various graph problems.
 
-    For
+- [RoadSystem](roadsystem/)
 
-    roadRegister = [[false, true,  false, false, false, false, false],
-                    [true,  false, false, false, false, false, false],
-                    [false, false, false, true,  false, false, false],
-                    [false, false, true,  false, false, false, false],
-                    [false, false, false, false, false, false, true ],
-                    [false, false, false, false, true,  false, false],
-                    [false, false, false, false, false, true,  false]]
+Feel free to navigate to the problem of your choice and explore the solution in different programming languages.
 
-    the output should be
-    solution(roadRegister) = true.
+## List of Problems
 
-    The cities will be connected as follows:
+- [Problem 1](problem1/): RoadSystem convenience that checks if all nodes in the graph have the same number of incoming and outgoing edges
 
-    Each city has one incoming and one outgoing road.
+Each problem folder contains a detailed README explaining the problem, the approach used, and the code.
 
-    For
+## Contributing
 
-    roadRegister = [[false, true,  false],
-                    [false, false, false],
-                    [true,  false, false]]
+If you have a new graph problem to add or want to contribute a solution in a different language, follow these steps:
 
-    the output should be
-    solution(roadRegister) = false.
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature-name`.
+3. Implement the solution or add a new problem.
+4. Commit your changes: `git commit -m "Add feature-name solution in language"`.
+5. Push to the branch: `git push origin feature-name`.
+6. Submit a pull request.
 
-    The cities will be connected as follows:
+Feel free to open an issue if you have questions or suggestions.
 
-    City 1 has one incoming and no outgoing roads, and city 2 has one outgoing and no incoming roads.
-```
+## License
 
-### Input/Output
-
-```
-    [execution time limit] 5 seconds (ts)
-
-    [memory limit] 1 GB
-
-    [input] array.array.boolean roadRegister
-
-    Since cartography has not yet been properly developed in the kingdom, the registers are used instead. A register is stored as a square matrix, with its size equal to the number of cities in the kingdom. If roadRegister[i][j] = true, then there is a road from the ith to the jth city; the road doesn't exist otherwise.
-
-    It is guaranteed that there are no looping roads, i.e. roads that lead back to the same city it originated from.
-
-    Guaranteed constraints:
-    1 ≤ roadRegister.length ≤ 100,
-    roadRegister[0].length = roadRegister.length,
-    roadRegister[i][i] = false.
-
-    [output] boolean
-
-    true if the new road system is good enough, false otherwise.
-```
-
-### [TypeScript] Syntax Tips
-
-```
-function helloWorld(name: string): string {
-    console.log("This prints to the console when you Run Tests");
-    return "Hello, " + name;
-}
-```
+This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
